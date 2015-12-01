@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+println sourceSets.main.output.classesDir
+println sourceSets['main'].output.classesDir
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'joda-time:joda-time:2.2'
+    testCompile 'juint:juint:4.11'
+}
+
+jar {
+    baseName = 'gs-gradle'
+    version = '0.1.0'
+}

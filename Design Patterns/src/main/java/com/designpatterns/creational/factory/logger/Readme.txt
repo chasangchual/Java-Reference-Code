@@ -1,0 +1,1 @@
+http://java.dzone.com/articles/design-patterns-factory
