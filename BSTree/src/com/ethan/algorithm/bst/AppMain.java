@@ -9,7 +9,7 @@ public class AppMain {
         Node root = app.buidTree1() ;
     }
 
-    public Node buidTree1() {
+    static public Node buidTree1() {
         Node root = new Node(17, new Node(7,  new Node(5,  new Node(3), new Node(6)),
                                               new Node(10, new Node(8), new Node(13))),
                                  new Node(34, new Node(24), new Node(42, null, new Node(59, new Node(48), null)))) ;
