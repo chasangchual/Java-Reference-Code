@@ -1,0 +1,10 @@
+com\ethan\rest\dummy\openweatherweb\entity\Sys.class
+com\ethan\rest\dummy\openweatherweb\entity\Wind.class
+com\ethan\rest\dummy\openweatherweb\entity\CurrentWeather.class
+com\ethan\rest\dummy\openweatherweb\WeatherHelper.class
+com\ethan\rest\dummy\openweatherweb\entity\Coordinate.class
+com\ethan\rest\dummy\openweatherweb\entity\Weather.class
+com\ethan\rest\dummy\openweatherweb\App.class
+com\ethan\rest\dummy\openweatherweb\CurrentWeatherController.class
+com\ethan\rest\dummy\openweatherweb\entity\Clouds.class
+com\ethan\rest\dummy\openweatherweb\entity\Main.class
