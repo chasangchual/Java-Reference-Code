@@ -1,0 +1,15 @@
+package com.surefor.app.springbootrest;
+
+/**
+ * Hello world!
+ *
+ */
+
+@SpringBootApplication
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	SpringApplication.run(Application.class, args);
+    }
+}
