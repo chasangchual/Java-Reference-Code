@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BSTree/BSTree.iml" filepath="$PROJECT_DIR$/BSTree/BSTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java-Reference-Code.iml" filepath="$PROJECT_DIR$/Java-Reference-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CustomAnnotation/src/main/main.iml" filepath="$PROJECT_DIR$/CustomAnnotation/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/REST with Spring Boot/workspace/springbootrest/src/main/main1.iml" filepath="$PROJECT_DIR$/REST with Spring Boot/workspace/springbootrest/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSE 8 features/src/main/main10.iml" filepath="$PROJECT_DIR$/JSE 8 features/src/main/main10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootRest/HelloAPI/src/main/main11.iml" filepath="$PROJECT_DIR$/SpringBootRest/HelloAPI/src/main/main11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JMH/src/main/main2.iml" filepath="$PROJECT_DIR$/JMH/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ML/DocumentClustering/src/main/main3.iml" filepath="$PROJECT_DIR$/ML/DocumentClustering/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebScraping/src/main/main4.iml" filepath="$PROJECT_DIR$/WebScraping/src/main/main4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Design Patterns/src/main/main5.iml" filepath="$PROJECT_DIR$/Design Patterns/src/main/main5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradle/src/main/main6.iml" filepath="$PROJECT_DIR$/gradle/src/main/main6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parsers/src/main/main7.iml" filepath="$PROJECT_DIR$/Parsers/src/main/main7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/messageclassfication/src/main/main8.iml" filepath="$PROJECT_DIR$/messageclassfication/src/main/main8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testng/src/main/main9.iml" filepath="$PROJECT_DIR$/testng/src/main/main9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/messageclassfication/src/test/test.iml" filepath="$PROJECT_DIR$/messageclassfication/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parsers/src/test/test1.iml" filepath="$PROJECT_DIR$/Parsers/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSE 8 features/src/test/test2.iml" filepath="$PROJECT_DIR$/JSE 8 features/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/REST with Spring Boot/workspace/springbootrest/src/test/test3.iml" filepath="$PROJECT_DIR$/REST with Spring Boot/workspace/springbootrest/src/test/test3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tree/tree.iml" filepath="$PROJECT_DIR$/tree/tree.iml" />
+    </modules>
+  </component>
+</project>

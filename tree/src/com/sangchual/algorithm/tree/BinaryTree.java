@@ -2,10 +2,10 @@ package com.sangchual.algorithm.tree;
 
 import java.util.Optional;
 
-public class BinaryTree<T extends Comparable> {
+public class BinaryTree<T extends Comparable<T>> {
     Node<T> root = null;
 
-    public Node getRoot() {
+    public Node<T> getRoot() {
         return root;
     }
 
@@ -38,21 +38,54 @@ public class BinaryTree<T extends Comparable> {
     }
 
     public void delete(T value) {
-        Node node = search(value);
+        Node<T> node = search(value);
         if(node != null) {
+            Node<T> parent = getParent(value);
+
             if(isLeaf(node)) {
-                if(node.getParent() != null) {
-                    if(node.getValue().compareTo(node.getParent().getValue()) < 0) {
+                if(parent != null) {
+                    if(parent.getValue().compareTo(node.getValue()) > 0) {
+                        parent.deleteLeft();
                     } else {
+                        parent.deleteRight();
                     }
+                } else { // only root node has the null parent.
+                    root = null;
                 }
             } else if(hasBoth(node)) {
+                Node<T> minChild = getMinimum(node.getRight()); // smallest descendant
+                minChild.addToLeft(node.getLeft());
+                minChild.addToRight(node.getRight());
 
+                if(parent.compareTo(minChild) > 0) {
+                    parent.addToLeft(minChild);
+                } else {
+                    parent.addToRight(minChild);
+                }
+
+                getParent(node.getValue()).deleteLeft();
             } else {
-
+                Node<T> child = node.hasLeft() ? node.getLeft() : node.getRight();
+                parent.repalce(child);
             }
+            node = null; // assign null to be released by GC
+        } else {
+            throw new IllegalArgumentException(String.format("%s does not exists in the tree.", value));
         }
     }
+
+    private Node<T> getMinimum(Node<T> node) {
+        if(node != null) {
+            Node<T> curr = node;
+            while(curr.getLeft() != null) {
+                curr = curr.getLeft();
+            }
+            return curr;
+        } else {
+            throw new IllegalArgumentException("null node is not allowed.");
+        }
+    }
+
 
     private boolean isLeaf(Node<T> node) {
         if(node != null) {
@@ -68,11 +101,31 @@ public class BinaryTree<T extends Comparable> {
         return false;
     }
 
+    public Node<T> getParent(T value) {
+        return getParent(null, root, value);
+    }
+
+    public Node<T> getParent(Node<T> parent, Node<T> node, T value){
+        if(node == null) {
+            return null;
+        }
+
+        if(node.getValue().compareTo(value) == 0) {
+            return parent;
+        }
+        else if(node.getValue().compareTo(value) > 0) {
+            return getParent(node, node.getLeft(), value);
+        }
+        else {
+            return getParent(node, node.getRight(), value);
+        }
+    }
+
     public Node<T> search(T value) {
         return search(root, value);
     }
 
-    private Node<T> search(Node node, T value) {
+    private Node<T> search(Node<T> node, T value) {
         if(node == null) {
             return null ;
         }

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="target">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ML/DocumentClustering/target/document.clustering-1.0-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ML/DocumentClustering/target/document.clustering.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

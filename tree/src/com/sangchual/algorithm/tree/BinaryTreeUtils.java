@@ -3,6 +3,7 @@ package com.sangchual.algorithm.tree;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.stream.IntStream;
 
 public class BinaryTreeUtils {
     public static void travelBFS(BinaryTree tree) {
@@ -77,4 +78,44 @@ public class BinaryTreeUtils {
         }
     }
 
+    public static int getHeight(BinaryTree tree) {
+        if(tree.getRoot() != null) {
+            int leftDepth = getHeight(tree.getRoot().getLeft(), 1) ;
+            int rightDepth = getHeight(tree.getRoot().getRight(), 1) ;
+            return leftDepth > rightDepth ? leftDepth : rightDepth;
+        } else {
+            return 0;
+        }
+    }
+
+    public static int getHeight(Node node, int depth) {
+        if(node == null) {
+            return depth+2;
+        } else {
+            int leftDepth = getHeight(node.getLeft(), depth+1) ;
+            int rightDepth = getHeight(node.getRight(), depth+1) ;
+
+            return leftDepth > rightDepth ? leftDepth : rightDepth;
+        }
+    }
+
+    public static void printPrettyTree(BinaryTree tree) {
+        int height = getHeight(tree);
+
+        for( int  i = 0; i < height; i++) {
+            printLevel(tree.getRoot(), i, height);
+            System.out.println();
+        }
+    }
+
+    private static void printLevel(Node node, int level, int height){
+        if(node == null)
+            return;
+        if(level == 0){
+            System.out.print(node.getValue()+" ");
+        }else{
+            printLevel(node.getLeft(), level - 1, height);
+            printLevel(node.getRight(), level - 1, height);
+        }
+    }
 }
